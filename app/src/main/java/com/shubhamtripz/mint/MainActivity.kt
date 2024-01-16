@@ -1,8 +1,11 @@
 package com.shubhamtripz.mint
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.facebook.shimmer.ShimmerFrameLayout
@@ -21,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         // Setup RecyclerView
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -33,6 +35,14 @@ class MainActivity : AppCompatActivity() {
 
         // Fetch data from API
         fetchData()
+
+        val search_img_btn : ImageView = findViewById(R.id.search_img_btn)
+
+        search_img_btn.setOnClickListener {
+            val intent = Intent(this, SearchActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun fetchData() {
@@ -49,7 +59,8 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val songList = response.body()
                     if (songList != null) {
-                        songAdapter = SongAdapter(this@MainActivity, songList)
+                        val reversedSongList = songList.reversed()
+                        songAdapter = SongAdapter(this@MainActivity, reversedSongList)
                         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
                         recyclerView.adapter = songAdapter
                         shimmerView.stopShimmer()

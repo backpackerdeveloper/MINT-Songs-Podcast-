@@ -44,7 +44,7 @@ class DetailActivity : AppCompatActivity() {
             finish()
         }
 
-        val title = intent.getStringExtra("title")
+        val title= intent.getStringExtra("title")
         val artist = intent.getStringExtra("artist")
         val imageUrl = intent.getStringExtra("imageUrl")
         val musicUrl = intent.getStringExtra("musicUrl")
