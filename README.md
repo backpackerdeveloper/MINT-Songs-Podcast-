@@ -17,5 +17,5 @@ Welcome to the Mint Songs and Podcasts Android App repository, a project develop
 
 1. Clone the repository to your local machine.
    ```bash
-   git clone https://github.com/your-username/your-repository.git
-2. Or Just use Android git Option to Clone this repo
+   git clone https://github.com/backpackerdeveloper/MINT-Songs-Podcast-.git
+2. Or Just use the Android Studio git Option to Clone this repo
