@@ -1,6 +1,6 @@
-# Mint Songs and Podcasts
+# Mint Songs and Podcasts - Android Workshop Project
 
-Welcome to the Mint Songs and Podcasts Android App repository! This app allows users to stream songs and podcasts, search for songs by movie name, album name, and artist name.
+Welcome to the Mint Songs and Podcasts Android App repository, a project developed during the GDSC PU's 3-day Android Workshop! This app enables users to stream songs and podcasts while providing features to search for songs by movie name, album name, and artist name.
 
 ## Features
 
@@ -18,3 +18,4 @@ Welcome to the Mint Songs and Podcasts Android App repository! This app allows u
 1. Clone the repository to your local machine.
    ```bash
    git clone https://github.com/your-username/your-repository.git
+2. Or Just use Android git Option to Clone this repo
